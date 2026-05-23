@@ -1,0 +1,415 @@
+<html>
+
+<head>
+  <title>SETERA</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="announcement" role="region" aria-label="Site notices">
+    <div class="announcement__track">
+      <span class="announcement__sep"></span>
+      <p class="announcement__msg"></p>
+    </div>
+  </div>
+
+  <div class="hero-header-stack">
+    <header class="site-header site-header--bar">
+      <div class="header-inner">
+
+        <div class="header-start">
+          <a href="index.html" class="brand brand--lux" aria-label="SETERA home">
+            <span class="brand__mark">
+              <img src="LOGO.png" alt="SETERA" class="brand-logo" width="250" height="80">
+            </span>
+            <span class="brand-tagline">SHOP MORE, LIVE BETTER</span>
+          </a>
+        </div>
+
+        <div class="header-controls">
+
+          <button type="button"
+                  class="btn-cart-header js-open-basket"
+                  aria-label="Open shopping cart">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z">
+              <line x1="3" y1="6" x2="21" y2="6">
+              <path d="M16 10a4 4 0 01-8 0">
+            </svg>
+            Cart
+            <span class="cart-count-badge js-cart-count">0</span>
+          </button>
+
+          <button type="button"
+                  class="btn-checkout-header js-open-checkout js-checkout-trigger"
+                  disabled>
+            Checkout
+          </button>
+
+          <div style="position:relative;">
+            <span class="member-label" id="memberLabel" hidden>MEMBER</span>
+            <button type="button"
+                    class="btn-auth-header"
+                    id="authBtn"
+                    data-mode="login"
+                    aria-label="Sign in to SETERA"
+                    title="Sign in">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2">
+                <circle cx="12" cy="7" r="4">
+              </svg>
+              <span class="auth-btn-label">Sign in</span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+    <section class="hero-slideshow hero-slideshow--hero" aria-label="Featured offers and media">
+      <div class="slides" id="slides">
+        <article class="slide slide--banner active" data-slide="0">
+          <img src="electronic_banner.jpeg" alt="Luxury electronics — laptops, audio and flagship devices with SETERA promotion" class="slide-img slide-img--banner">
+          <div class="slide-overlay slide-overlay--discount">
+            <h2>Flagship electronics</h2>
+            <p>Limited-time 25% off our luxury tech edit — premium laptops, headphones, and statement gadgets for the discerning collector.</p>
+            <a href="#catalog" class="btn btn--gold catalog-filter-link" data-category="electronics">Shop electronics</a>
+          </div>
+        </article>
+
+        <article class="slide slide--banner" data-slide="2">
+          <img src="top4.jpeg" alt="Designer shoes and elevated footwear" class="slide-img slide-img--banner">
+          <div class="slide-overlay slide-overlay--light">
+            <h2>Designer shoes</h2>
+            <p>From polished platforms to refined athleisure — footwear crafted for sidewalks, studios, and spotlight moments.</p>
+            <a href="#catalog" class="btn btn--gold catalog-filter-link" data-category="fashion">Shop shoes &amp; fashion</a>
+          </div>
+        </article>
+
+        <article class="slide slide--banner" data-slide="3">
+          <img src="cosmetic_banner.jpeg" alt="Branded perfumes and luxury beauty" class="slide-img slide-img--banner">
+          <div class="slide-overlay slide-overlay--light">
+            <h2>Branded perfumes &amp; beauty</h2>
+            <p>Iconic eaux de parfum, sculpted flacons, and complexion heroes — niche and designer fragrances alongside refined beauty.</p>
+            <a href="#catalog" class="btn btn--gold catalog-filter-link" data-category="makeup">Shop fragrance &amp; beauty</a>
+          </div>
+        </article>
+
+        <article class="slide slide--banner" data-slide="4">
+          <img src="homedeco_banner.jpeg" alt="Curated luxury lifestyle and home ambience" class="slide-img slide-img--banner">
+          <div class="slide-overlay slide-overlay--light">
+            <h2>The SETERA salon</h2>
+            <p>Editorial vignettes pairing scent, silhouette, tech, and carry — browse the full luxury assortment in one curated space.</p>
+            <a href="#catalog" class="btn btn--gold catalog-filter-link" data-category="all">View all luxury</a>
+          </div>
+        </article>
+
+        <article class="slide slide--video" data-slide="5">
+          <video class="slide-video" muted playsinline loop preload="metadata">
+            <source src="fashion.mp4" type="video/mp4">
+          </video>
+          <div class="slide-overlay slide-overlay--dark">
+            <h2>Runway rhythm</h2>
+            <p>Motion-led storytelling — handbags, soles, scent trails, and light on premium pieces.</p>
+          </div>
+        </article>
+
+        <article class="slide slide--video" data-slide="6">
+          <video class="slide-video" muted playsinline loop preload="metadata">
+            <source src="issy.mp4" type="video/mp4">
+          </video>
+          <div class="slide-overlay slide-overlay--dark">
+            <h2>Atelier vignettes</h2>
+            <p>Close crops of leather grain, mirrored compacts, and silk-adjacent texture — luxury in detail.</p>
+          </div>
+        </article>
+
+        <article class="slide slide--video" data-slide="7">
+          <video class="slide-video" muted playsinline loop preload="metadata">
+            <source src="kendal.mp4" type="video/mp4">
+          </video>
+          <div class="slide-overlay slide-overlay--dark">
+            <h2>SETERA motion</h2>
+            <p>Cinematic pacing for perfume, footwear, electronics, and carry — editorial film for our house codes.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="slide-controls">
+        <button type="button" class="slide-dot active" data-go="0" aria-label="Slide: flagship electronics"></button>
+        <button type="button" class="slide-dot" data-go="1" aria-label="Slide: designer bags"></button>
+        <button type="button" class="slide-dot" data-go="2" aria-label="Slide: designer shoes"></button>
+        <button type="button" class="slide-dot" data-go="3" aria-label="Slide: branded perfumes and beauty"></button>
+        <button type="button" class="slide-dot" data-go="4" aria-label="Slide: curated luxury assortment"></button>
+        <button type="button" class="slide-dot" data-go="5" aria-label="Video 1"></button>
+        <button type="button" class="slide-dot" data-go="6" aria-label="Video 2"></button>
+        <button type="button" class="slide-dot" data-go="7" aria-label="Video 3"></button>
+      </div>
+      <button type="button" class="slide-arrow slide-arrow--prev" id="slidePrev" aria-label="Previous slide">‹</button>
+      <button type="button" class="slide-arrow slide-arrow--next" id="slideNext" aria-label="Next slide">›</button>
+    </section>
+  </div>
+
+  <center>
+    <h1>S_E_T_E_R_A</h1>
+    <br>
+    <p>We combine the trust of a premium brand with the ease of modern e-commerce.
+      <br>Our platform is designed to make your shopping journey smooth from start to finish from browsing our handpicked
+      <br>collections to completing your checkout in just a few clicks.</p>
+  </center>
+
+  <section id="shop" class="categories-strip" aria-label="Shop by category">
+    <h2 class="section-title">Explore products</h2>
+    <div class="category-tabs" id="categoryTabs" role="tablist"></div>
+  </section>
+
+  <section id="catalog" class="catalog">
+    <div class="product-grid" id="productGrid"></div>
+  </section>
+
+  <aside class="cart-panel" id="cartPanel" aria-hidden="true" aria-label="Shopping basket">
+    <div class="cart-panel-inner">
+
+      <header class="cart-panel-head">
+        <div style="display:flex;align-items:center;gap:0.75rem;">
+          <h1>My Cart</h1>
+          <span class="cart-item-count js-cart-panel-count">0 items</span>
+        </div>
+        <button type="button" class="cart-close-btn" id="closeCart" aria-label="Close basket">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M18 6L6 18M6 6l12 12">
+          </svg>
+        </button>
+      </header>
+
+      <div class="cart-panel-body">
+
+        <div class="cart-items-col" id="cartLines">
+          <div class="cart-empty-state">
+            <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+              <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z">
+              <line x1="3" y1="6" x2="21" y2="6">
+              <path d="M16 10a4 4 0 01-8 0">
+            </svg>
+            <p>Your basket is empty</p>
+          </div>
+        </div>
+
+        <div class="cart-summary-col">
+          <h2 class="summary-heading">Order Summary</h2>
+
+          <div class="summary-rows" id="cartBreakdown"></div>
+
+          <div class="promo-row">
+            <span class="promo-row__label">Promo</span>
+            <div class="promo-input-wrap">
+              <input type="text" class="promo-input" id="promoInput"
+                     value="SETERA10" readonly aria-label="Applied promo code">
+              <button type="button" class="promo-apply-btn">Applied ✓</button>
+            </div>
+          </div>
+
+          <div class="summary-divider"></div>
+          <div class="summary-total-row">
+            <span class="summary-total-label">Total</span>
+            <span class="summary-total-amount" id="cartTotalAmt">LKR 0</span>
+          </div>
+
+          <button type="button"
+                  class="btn-summary-checkout js-checkout-trigger"
+                  id="checkoutOpen"
+                  disabled>
+            Proceed to Checkout
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7">
+            </svg>
+          
+
+          <div class="or-divider">or</div>
+          <button type="button" class="btn-continue" id="continueShoppingBtn">
+            Continue Shopping
+          </button>
+
+          <p class="shipping-note">
+            <strong>Free delivery</strong> on orders over LKR 25,000 ·
+            Flat LKR 450 below ·
+            <strong>SETERA10</strong> −10% always applied
+          </p>
+        </div>
+
+      </div>
+    </div>
+    <div class="cart-scrim" id="cartScrim"></div>
+  </aside>
+
+  <div class="modal" id="loginModal" role="dialog" aria-modal="true" aria-labelledby="loginTitle" hidden>
+    <div class="modal-card">
+      <button type="button" class="modal-close" id="closeLogin" aria-label="Close">×</button>
+      <!-- Auth tabs -->
+      <div style="display:flex;gap:0;border-bottom:1px solid rgba(255,255,255,0.1);margin-bottom:1.25rem;">
+        <button type="button" id="tabLoginBtn"
+          style="flex:1;padding:0.6rem;background:none;border:none;color:var(--gold,#c8a96e);font-weight:600;cursor:pointer;border-bottom:2px solid currentColor;font-size:0.95rem;">
+          Sign in
+        </button>
+        <button type="button" id="tabRegisterBtn"
+          style="flex:1;padding:0.6rem;background:none;border:none;color:rgba(255,255,255,0.45);font-weight:600;cursor:pointer;border-bottom:2px solid transparent;font-size:0.95rem;">
+          Create account
+        </button>
+      </div>
+
+      <!-- Login form -->
+      <div id="tabLoginPanel">
+        <h2 id="loginTitle" style="margin-bottom:1rem;">Sign in to SETERA</h2>
+        <form id="loginForm">
+          <div class="form-row">
+            <label for="loginEmail">Email</label>
+            <input type="email" id="loginEmail" required autocomplete="username" placeholder="Email">
+          </div>
+          <div class="form-row">
+            <label for="loginPass">Password</label>
+            <input type="password" id="loginPass" required autocomplete="current-password" placeholder="Password">
+          </div>
+          <p id="loginNote" style="color:#e05c5c;font-size:0.85rem;min-height:1.2rem;margin-bottom:0.5rem;"></p>
+          <button type="submit" class="btn btn--gold btn--block">Login</button>
+        </form>
+      </div>
+
+      <!-- Register form -->
+      <div id="tabRegisterPanel" hidden>
+        <h2 style="margin-bottom:1rem;">Create your account</h2>
+        <form id="registerForm">
+          <div class="form-row">
+            <label for="regName">Full name</label>
+            <input type="text" id="regName" required autocomplete="name" placeholder="Your name">
+          </div>
+          <div class="form-row">
+            <label for="regEmail">Email</label>
+            <input type="email" id="regEmail" required autocomplete="username" placeholder="Email">
+          </div>
+          <div class="form-row">
+            <label for="regPass">Password</label>
+            <input type="password" id="regPass" required autocomplete="new-password" placeholder="At least 6 characters">
+          </div>
+          <p id="registerNote" style="color:#e05c5c;font-size:0.85rem;min-height:1.2rem;margin-bottom:0.5rem;"></p>
+          <button type="submit" class="btn btn--gold btn--block">Create account</button>
+        </form>
+      </div>
+    </div>
+    <div class="modal-scrim" data-close="login"></div>
+  </div>
+
+  <div class="modal" id="checkoutModal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle" hidden>
+    <div class="modal-card modal-card--wide">
+      <button type="button" class="modal-close" id="closeCheckout" aria-label="Close">×</button>
+      <h2 id="checkoutTitle">Checkout</h2>
+      <form id="checkoutForm" class="checkout-form">
+        <fieldset>
+          <legend>Delivery details</legend>
+          <div class="form-grid">
+            <div class="form-row">
+              <label for="coFullName">Full name</label>
+              <input type="text" id="coFullName" required autocomplete="name" placeholder="Full name">
+            </div>
+            <div class="form-row">
+              <label for="coEmail">Email (order confirmation)</label>
+              <input type="email" id="coEmail" required autocomplete="email" placeholder="Email for confirmation">
+            </div>
+            <div class="form-row form-row--full">
+              <label for="coAddress">Address</label>
+              <input type="text" id="coAddress" required autocomplete="street-address" placeholder="Street address">
+            </div>
+            <div class="form-row">
+              <label for="coCity">City</label>
+              <input type="text" id="coCity" required autocomplete="address-level2" placeholder="City">
+            </div>
+            <div class="form-row">
+              <label for="coPhone">Phone</label>
+              <input type="tel" id="coPhone" required autocomplete="tel" placeholder="Phone number">
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Payment</legend>
+          <div class="form-grid">
+            <div class="form-row form-row--full">
+              <label for="coCardName">Name on card</label>
+              <input type="text" id="coCardName" required autocomplete="cc-name" placeholder="Name on card">
+            </div>
+            <div class="form-row">
+              <label for="coCard">Card number</label>
+              <input type="text" id="coCard" required inputmode="numeric" autocomplete="cc-number" placeholder="Card number">
+            </div>
+            <div class="form-row">
+              <label for="coExpiry">Expiry (MM/YY)</label>
+              <input type="text" id="coExpiry" required autocomplete="cc-exp" placeholder="MM/YY">
+            </div>
+            <div class="form-row">
+              <label for="coCvv">CVV</label>
+              <input type="password" id="coCvv" required maxlength="4" autocomplete="cc-csc" placeholder="CVV">
+            </div>
+          </div>
+        </fieldset>
+        <p class="order-summary" id="orderSummary"></p>
+        <button type="submit" class="btn btn-checkout-cta btn--block">Place order</button>
+        <p class="form-note" id="checkoutNote" role="status"></p>
+      </form>
+    </div>
+    <div class="modal-scrim" data-close="checkout"></div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="app.js"></script>
+</body>
+
+  <div class="main-header">
+    <center>
+      <h1>SETERA <span class="gold-text">Luxury Marketplace</span></h1>
+      <br>
+      <p>Discover our curated collections across Electronics, Fashion,<br> Home Decor, Beauty, Foods &amp; Baby</p>
+    </center>
+  </div>
+
+  <aside>
+    <center>
+      <h2>Why Choose SETERA</h2><br>
+      <p>25% off on Electronics</p>
+      <p>Free delivery above LKR 25,000</p>
+      <p>Extra 10% with SETERA10</p>
+      <p>Curated luxury products</p>
+      <p>Secure payment gateway</p>
+      <p>24/7 customer support</p>
+    </center>
+  </aside>
+
+  <div class="footer-col">
+    <hr>
+    <h3>Quick Links</h3>
+    <ul>
+      
+      <li><a href="">Home</a></li>
+    </ul>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Contacts</h3>
+        <ul>
+          <div class="footer-section">
+            <div>
+              E-mail: <a href="mailto:seterainfo@gmail.com" style="color:rgb(38,29,29);">seterainfo@gmail.com</a><br>
+              Mobile: +94 11 200 2222
+            </div>
+          </div>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; SETERA Platform. All rights reserved. | Privacy Policy | Terms of Service</p>
+    </div>
+  </footer>
+
+</html>
